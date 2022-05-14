@@ -1,0 +1,6 @@
+render()
+    returns description of what you want to see
+        a react element is returned
+        <div> is transformed at build time
+npm run deploy -- -m "Deploy React app to GitHub Pages"
+    commit w/ message 

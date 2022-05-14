@@ -1,0 +1,140 @@
+CSS Properties Ref:https://www.tutorialrepublic.com/css-reference/css3-properties.php
+style="color: x;" inside of the opening tag to 
+provide color (property)(inline style declaration)
+
+<style></style> CSS selector for all elements inside 
+    ex: <style> h2 {color: red;} </style> all h2 become red
+
+CSS class
+each tag can have multiple classes by separating with a space
+names start with a period in the style tag
+     <style>
+      .blue-text {
+          color: blue;
+        } 
+    </style>
+    blue-text is the class you apply by inserting in opening tag
+    <h2 class="blue-text"></h2> (remember to drop "." outside of the style tag)
+
+import libraries
+    <link href="link" rel="stylesheet" type="text/css">
+    insert above style tag
+order determines degradation of style if not available
+    p {
+    font-family: Helvetica, sans-serif;
+    }
+
+border-color/style/width/radius properties
+    radius can be px or %
+
+background-color
+
+id= 
+    unique can only apply to 1 element
+    id > class if an element has both it will take the properties of the id
+    referenced inside the style tag with #idname
+
+padding
+    space between an elements content and its border
+    can add to top,left,right,bottom (padding-top)
+margin
+    space between element's border and its surrounding elements
+    negative number makes the element larger postive makes it smaller
+    margin top,left,right,bottom
+
+clock-notation
+    top -> right -> bottom -> left
+    padding/margin: list px with a space between
+
+[attr=value]selector   
+    matches and styles elements with a specific attr value
+    inside style
+
+absolute vs relative units
+    absolute = px in mm
+    relative = em rem
+    em = based on font
+    
+Inheritance
+    every html page has <body> tag by default
+    other tags will inherit from body can style body in same manner with CSS
+    declared class in tag overrides inherited traits
+    multiple clases order doesn't matter
+    class declaration order matters (later ones styles take precedence over earlier one)
+    !important > inline styles > id > class > body in terms of override
+    !important before ;
+
+colors can be in hex 3/6 digit
+    1/2 digit for rgb values
+colors can be rgb(0,0,0)
+
+CSS variables 
+    --string: value; (inside style tag) 
+    ref the variable like
+        background: var(--class); < assigns variable value to background
+    can attach fallback values using , after class name
+
+Browser fall back  
+    if browser does not support the css may use default values
+    can declare same value with a fall back above the unsupported CSS value
+
+inheritance
+    :root{} is a pseudo-class selector that matches to the root elemnt of doc
+    :root{} is available globally can be accessed from any other selector
+    can overwrite the variables in :root{} within classes and it wont affect rest of the page
+
+text markup
+    can use tags inside of another tag or by declaration in a class
+    <strong></strong> = bold (font-weight: bold)
+    <u></u> = underline (text-decoration: underline)
+    <em></em> = italics (font-style: italic)
+    <s></s> = strikethrough (text-decoration: linethrough)
+    <hr> = horizontal line self closing
+
+text transform table
+    lowercase	"transform me"
+    uppercase	"TRANSFORM ME"
+    capitalize	"Transform Me"
+    initial	Use the default value
+    inherit	Use the text-transform value from the parent element
+    none	Default: Use the original text
+
+pseudoclasses
+    class:hover changes state of hover
+
+CSS box model
+    by default CSS treats each element as individual boxes
+    block items automatically start on new line
+    default layout of elements = normal flow
+    position property to override
+        relative: pairs with top,left,right,bottom move relative to position in the normal flow
+        absolute: locks element in position relative to parent container (relative to closest positioned ancestor)
+    other elements behave normally when changing elements position 
+
+float:
+    remove from normal flow and elements forced to left/right of parent containing element
+
+z-index  
+    determine stacking order
+    integer and higher # = higher on stack
+
+hsl()
+    Hue is what people generally think of as 'color'. 
+    If you picture a spectrum of colors starting with red on the left, moving through green in the middle, and blue on right, 
+    the hue is where a color fits along this line. In hsl(), hue uses a color wheel concept instead of the spectrum, 
+    where the angle of the color on the circle is given as a value between 0 and 360.
+
+    Saturation is the amount of gray in a color. A fully saturated color has no gray in it, and a minimally saturated color is almost completely gray. 
+    This is given as a percentage with 100% being fully saturated.
+
+    Lightness is the amount of white or black in a color. A percentage is given ranging from 0% (black) to 100% (white), where 50% is the normal color.
+    
+background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);
+
+Flexbox
+    display: flex; <add to an element
+    turns element into flex container
+    can align children of the element to rows or columns using flex-direction:
+    flex-direction: row/column/row-reverse/column-reverse (default is row)
+
+Grid

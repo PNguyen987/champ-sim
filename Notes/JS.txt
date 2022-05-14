@@ -1,0 +1,84 @@
+Comments: // inline  /* multi */ 
+
+can insert JS inside <script></script> tag to manipulate HTML
+
+var NAME; < variable declaration
+    supports initialization var NAME = X;
+    starts as undefined if not initialized 
+    easily overwritable
+        ex: var j = 5; var j = 4;  (j is 4 at the end)
+        let NAME (ES6) was introduced to remedy this variable is still mutable
+const NAME
+    IMMUTABLE
+DataTypes
+    undefined
+        mathematical operations on these will result in NaN
+        concat string will result in undefined
+    null
+    boolean
+    string
+        single or double quotes
+        0 or more characters in quotes
+        + operation to concat
+        " \"content\" " for string literals
+        ' " both work but benefits and disadvantages exist
+        \\ = \
+        \n = new line
+        \r = carriage return 
+        \t = tab
+        \b = word boundary
+        \f = form feed
+        .length 
+        individual characters cannot be changed in JS using []
+    symbol
+    Bigint
+    Number
+        numeric data
+        ++ -- increment/decrement
+        can store floats
+        % (remainder) not the same as mod in JS since it does not function with negative numbers
+        compound assignment exists (+=)
+    Object
+        similar to arrays have to access data through properties
+        const NAME = {
+            "data1": 1,
+            data2: asadf,
+            "data 3": "v2",
+            etc
+        }
+            can omit "" on single word string properties
+            numbers can be used as properties (1)
+            nonstring properties will be typecasted as strings
+        Access
+            . notation: NAME.data1;
+            [] notation: NAME["data1"];
+            can put variables in [] if it matches property name
+        Updating properties
+            NAME.data1 = "newdata"; equivalent for the rest
+        Add new properties 
+            NAME.newP = "new";
+        Delete property
+            delete NAME.data1;
+Arrays
+    const Array = [Data, data]
+    nested 
+        const Array = [[]]
+    Array.push Array.pop Array.shift Array.unshift
+        pop removes last
+        push adds element onto end
+        shift removes first
+        unshift adds to front
+
+Functions
+    function Name(args) {
+        Content
+
+        return;
+    }
+    Undefined -> is the returned value if nothing returned
+
+
+Global
+    variables outside of a function have a global scope
+    variables made without let or const are global automatically
+    local > global (variables can have same name if local vs global)

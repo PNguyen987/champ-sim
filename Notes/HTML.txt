@@ -1,0 +1,63 @@
+HTML Element Ref: https://www.w3schools.com/TAgs/default.asp
+Include which version of HTML to use at the top:
+	<!DOCTYPE ######> for HTML5: <!DOCTYPE html>
+	<html></html> needs to wrap the HTML code below doctype
+
+head and body elements: organizational tools
+	markup info goes in head tag
+		metadata elements i.e: link, meta, title, style
+	markup with content of page for user to see goes into body
+		divs 
+
+Comments in HTML: <!--  -->
+
+<br> line break
+
+division element: <div> </div>
+	general purpose container for other elements
+	most commonly used HTML element
+
+URL based images: <img src="" alt=""> (Image tags are self closing)
+
+alt attributes: if decorate leave blank best practice (displayed if image fails to load)
+
+anchor: <a href="" target="_blank">hyperlinked text</a> link to content outside of webpage
+	href"#id" identifies an internal link add the id attribute to the element that needs to be linked
+	# no id creates a dead link
+	id describes an element EX: <h2 id="">EXAMPLE</h2>
+	target="_blank" adding this opens a new tab
+	can be nested in other elements (such as header elements or paragraph)
+	
+unordered lists bullet point style: <ul>
+		<li> element </li>
+		</ul>
+Ordered list numbered: <ol><li>123</li></ol>
+
+input:<input type="text" placeholder="test">
+	type can be different
+	required fields: add required after type quotes
+	can include value="" to have an associated value attached to name="" in form data
+	default value if value="" is not present is on
+action: submit data through html 
+	<form action="URL-to-submit-to">
+		<input element>
+		</form>
+Button: <button type="submit">button text</button>
+	nest inside form
+	type can be different
+
+Radio Buttons (multiple choice): 
+	type of input
+	can be nested in its own label element
+	wrapping input inside a lbael will automaticall associate the button with the label surrounding it
+	all related buttons should have same name attribute to make a group
+	checked can be added in the input tag to have it be checked by default
+
+	 <label for="indoor-outdoor">
+    		<input id="indoor" type="radio" name="indoor-outdoor">TEXT TO DISPLAY
+  	</label>
+only 1 label has to have the for tag
+
+CheckBoxes: 
+	same notes as radio buttons
+	
